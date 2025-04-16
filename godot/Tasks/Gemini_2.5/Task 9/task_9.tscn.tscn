@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://vl4417d47uc3"]
+
+[ext_resource type="PackedScene" uid="uid://c6w8q7x5y4f3g" path="res://Tasks/Gemini_2.5/Task 9/wiggle_button_demo.tscn" id="1_b4nhl"]
+
+[node name="Task9_tscn" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WiggleButtonDemo" parent="." instance=ExtResource("1_b4nhl")]
+layout_mode = 1

@@ -58,9 +58,10 @@ func create_model_dropdown():
 		dropdown.select(0)
 		current_model = dropdown.get_item_metadata(0)
 
+	call_deferred("_on_model_selected", 0)
+
 # Function to handle model selection
 func _on_model_selected(index):
-	var dropdown = %ModelDropdown
 	current_model = dropdown.get_item_metadata(index)
 	var tasks = []
 	var dir = DirAccess.open("res://Tasks/" + current_model)
