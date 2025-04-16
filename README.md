@@ -99,8 +99,9 @@ Score: 0=broken/useless 1=potentially useful/missed instructions 2=works 3=works
 | # | Task         | Type    | Complexity | Script | Scene | Shader | Notes |
 |---|--------------|---------|------------|--------|-------|--------|-------|
 | 9 | WiggleButton | Control | Low        | Y      | Y     | Y      | 1     |
+| 6 | DissappearingCube | 3D | High | Y      | Y     | N      | 1    |
 
-Notes: <sup>1</sup> Roo Code
+Notes: <sup>1</sup> Run with Roo Code
 
 ## Task details
 
