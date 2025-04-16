@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3]
+
+[node name="Task6Root" type="Node3D"]
+
+[node name="Ground" type="StaticBody3D" parent="."]
+groups = ["ground"]
+
+[node name="GroundMesh" type="MeshInstance3D" parent="Ground"]
+mesh = BoxMesh.new()
+transform = Transform3D(Basis(), Vector3(0, -0.5, 0))
+scale = Vector3(8, 1, 8)
+
+[node name="GroundCollision" type="CollisionShape3D" parent="Ground"]
+shape = BoxShape3D.new()
+shape.size = Vector3(8, 1, 8)
+
+[node name="DisappearingCube1" parent="." instance=ExtResource( 1 )]
+transform = Transform3D(Basis(), Vector3(0, 0.5, 0))
+
+[node name="DisappearingCube2" parent="." instance=ExtResource( 1 )]
+transform = Transform3D(Basis(), Vector3(0, 1.6, 0))
+
+[node name="DisappearingCube3" parent="." instance=ExtResource( 1 )]
+transform = Transform3D(Basis(), Vector3(0, 2.7, 0))
+
+[node name="DisappearingCube4" parent="." instance=ExtResource( 1 )]
+transform = Transform3D(Basis(), Vector3(1.2, 0.5, 0))
+
+[node name="DisappearingCube5" parent="." instance=ExtResource( 1 )]
+transform = Transform3D(Basis(), Vector3(-1.2, 0.5, 0))
+
+[node name="Player" type="RigidBody3D" parent="."]
+mass = 2.0
+
+[node name="PlayerMesh" type="MeshInstance3D" parent="Player"]
+mesh = SphereMesh.new()
+scale = Vector3(0.5, 0.5, 0.5)
+
+[node name="PlayerCollision" type="CollisionShape3D" parent="Player"]
+shape = SphereShape3D.new()
+shape.radius = 0.5
+
+[ext_resource path="res://Tasks/ChatGPT_4.1/Task 6/DisappearingCube.tscn" type="PackedScene" id=1]

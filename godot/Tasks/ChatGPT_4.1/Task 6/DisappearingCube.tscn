@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3]
+
+[node name="DisappearingCube" type="RigidBody3D"]
+script = preload("res://Tasks/ChatGPT_4.1/Task 6/DisappearingCube.gd")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = CubeMesh.new()
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = BoxShape3D.new()
+shape.size = Vector3(1, 1, 1)
+
+[node name="ContactArea" type="Area3D" parent="."]
+monitorable = true
+
+[node name="ContactShape" type="CollisionShape3D" parent="ContactArea"]
+shape = BoxShape3D.new()
+shape.size = Vector3(1.1, 1.1, 1.1)
