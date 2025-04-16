@@ -1,0 +1,10 @@
+model,task,script,scene,shader,score,notes
+gpt-4.1,9,Y,N,-,2,
+gpt-4.1,6,Y,N,-,1,
+o3-mini,9,N,N,Y,1,Only shader worked
+claude-3.7-sonnet-20250219,9,Y,Y,N,3,Over-engineered; shader faulty
+claude-3.7-sonnet-20250219,6,Y,Y,-,3,Playable
+gemini-pro-exp-03-25,9,Y,Y,-,3,
+deepseek-reasoner,9,Y,Y,Y,3,
+deepseek-reasoner,6,Y,N,-,1,invalid scene
+

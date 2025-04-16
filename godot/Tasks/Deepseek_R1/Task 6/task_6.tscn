@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://dxvnpjvr5ykbw"]
+
+[ext_resource type="PackedScene" path="res://Tasks/Deepseek_R1/Task 6/DisappearingCube.tscn" id="1_rbxq4"]
+[ext_resource type="Script" path="res://Tasks/Deepseek_R1/Task 6/PlayerController.gd" id="2_ytd8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yvdqr"]
+albedo_color = Color(0.2, 0.7, 0.2, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_btq3"]
+material = SubResource("StandardMaterial3D_yvdqr")
+size = Vector2(20, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ixnqm"]
+size = Vector3(20, 1, 20)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ytd9"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ytd9"]
+
+[node name="task_6" type="Node3D"]
+
+[node name="DirectionalLight" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(45, 45, 45)
+
+[node name="Ground" type="StaticBody3D" parent="."]
+collision_layer = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+mesh = SubResource("PlaneMesh_btq3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+shape = SubResource("BoxShape3D_ixnqm")
+
+[node name="Player" type="CharacterBody3D" parent="."]
+script = ExtResource("2_ytd8")
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+current = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
+mesh = SubResource("CapsuleMesh_ytd9")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = SubResource("CapsuleShape3D_ytd9")
+
+[node name="Cubes" type="Node3D" parent="."]
+position = Vector3(0, 2, 0)
+
+[node name="CubeStack" type="Node3D" parent="Cubes"]
+position = Vector3(0, 0, 0)
+
+[node name="Cube1" parent="CubeStack" instance=ExtResource("1_rbxq4")]
+position = Vector3(0, 0.5, 0)
+
+[node name="Cube2" parent="CubeStack" instance=ExtResource("1_rbxq4")]
+position = Vector3(0, 1.5, 0)
+
+[node name="Cube3" parent="CubeStack" instance=ExtResource("1_rbxq4")]
+position = Vector3(0, 2.5, 0)

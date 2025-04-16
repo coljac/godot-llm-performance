@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://Tasks/Deepseek_R1/Task 6/DisappearingCube.gd" id="1_cj9a3"]
+[ext_resource type="BoxMesh" uid="uid://ckd8tqk8r1xr" id="2_jerw9"]
+
+[node name="DisappearingCube" type="RigidBody3D"]
+script = ExtResource("1_cj9a3")
+timer_duration = 2.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_jerw9")
+material/0 = StandardMaterial3D.new()
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = BoxShape3D.new()
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true

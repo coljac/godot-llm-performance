@@ -1,0 +1,40 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "description": "Create a UI plotting component with configurable axes, ranges, and series plotting."
+    },
+    {
+      "id": 2,
+      "description": "Develop a vertex shader that simulates a flag waving in the wind."
+    },
+    {
+      "id": 3,
+      "description": "Create a 3D scene with a flagpole and flag using an existing shader."
+    },
+    {
+      "id": 4,
+      "description": "Write a script for a sprite that follows and rotates with mouse movement."
+    },
+    {
+      "id": 5,
+      "description": "Create a shader that simulates time of day effects with color transitions."
+    },
+    {
+      "id": 6,
+      "description": "Implement cubes that disappear when not in contact with ground or other cubes."
+    },
+    {
+      "id": 7,
+      "description": "Write a script for a camera that orbits around a target object."
+    },
+    {
+      "id": 8,
+      "description": "Implement a UI progress bar with gradient fill and smooth animations."
+    },
+    {
+      "id": 9,
+      "description": "Create a button that wiggles when moused over with configurable wiggle amount."
+    }
+  ]
+}

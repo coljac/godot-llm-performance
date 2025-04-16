@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cucwflwlm2xdx"]
+[gd_scene load_steps=5 format=3 uid="uid://bw3k8705qn57m"]
 
 [ext_resource type="Script" uid="uid://bguw32w5wll0t" path="res://Tasks/ChatGPT_o3-mini/Task 9/wiggle_button.gd" id="1_n6itk"]
 [ext_resource type="Shader" uid="uid://dxocm1gqorodg" path="res://Tasks/ChatGPT_o3-mini/Task 9/wiggle_button.gdshader" id="2_kf8hx"]

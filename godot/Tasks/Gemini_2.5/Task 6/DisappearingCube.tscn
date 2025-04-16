@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6w0q8y7x1v2b"]
+
+[ext_resource type="Script" path="res://Tasks/Gemini_2.5/Task 6/DisappearingCube.gd" id="1_abcde"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_12345"]
+size = Vector3(1, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_67890"]
+albedo_color = Color(0.8, 0.2, 0.2, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ijklm"]
+size = Vector3(1, 1, 1)
+
+[node name="DisappearingCube" type="RigidBody3D"]
+script = ExtResource("1_abcde")
+disappear_delay = 2.0
+# Enable contact monitoring so signals are emitted
+contact_monitor = true
+# Increase max contacts to ensure we detect ground/other cubes reliably
+max_contacts_reported = 8
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_12345")
+surface_material_override/0 = SubResource("StandardMaterial3D_67890")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_ijklm")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true

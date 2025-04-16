@@ -27,14 +27,18 @@ The models may also be instructed where to put the files they create.
 - Gemini: Gemini Pro 2.5 (gemini-pro-exp-03-25)
 - Deepseek: Deepseek R1 (deepseek-reasoner)
 
-## Leaderboard
+## Leaderboard (updated: 2025-04-16)
 
-| Model      | 2D | 3D | Control | Shader | Total |
-|------------|----|----|---------|--------|-------|
-| Sonnet 3.7 |    |    |         |        |       |
-| Gemini 2.5 |    |    |         |        |       |
-| ChatGPT 4.1 |    |    |         |        |       |
-| Deepseek R1 |    |    |         |        |       |
+| Rank | Model      | 2D | 3D | Control | Shader | Total |
+|------|------------|----|----|---------|--------|-------|
+| 1 - | Sonnet 3.7 |  | 3.0 | 3.0 |  | 3.0 |
+| 2 - | Gemini Pro 2.5 |  |  | 3.0 |  | 3.0 |
+| 3 - | Deepseek R1 |  | 1.0 | 3.0 |  | 2.0 |
+| 4 - | ChatGPT 4.1 |  | 1.0 | 2.0 |  | 1.5 |
+| 5 - | o3-mini |  |  | 1.0 |  | 1.0 |
+
+
+
 
 ## Results
 
@@ -45,31 +49,49 @@ Score: 0=broken/useless 1=potentially useful/missed instructions 2=works 3=works
 
 | Task | Script | Scene | Shader | Score |  Notes |
 |------|--------|-------|--------|-------|--------|
-|  9   |  ✅      |   ❌    |    -    |   2   |        |
+| 6 | ✅ | ❌ | - | 1 |  |
+| 9 | ✅ | ❌ | - | 2 |  |
+
+
+
 
 ### o3-mini
 
 | Task | Script | Scene | Shader | Score |  Notes |
 |------|--------|-------|--------|-------|--------|
-|  9   |   ❌     |   ❌    |    ✅    |   1   | Only shader worked   |
+| 9 | ❌ | ❌ | ✅ | 1 | Only shader worked |
+
+
+
 
 ### Sonnet 3.7
 
 | Task | Script | Scene | Shader | Score |  Notes |
 |------|--------|-------|--------|-------|--------|
-|  9   |  ✅      |   ✅    |    ❌    |   3   |  Over-engineered, shader faulty |
+| 6 | ✅ | ✅ | - | 3 | Playable |
+| 9 | ✅ | ✅ | ❌ | 3 | Over-engineered; shader faulty |
+
+
+
 
 ### Gemini Pro 2.5
 
 | Task | Script | Scene | Shader | Score |  Notes |
 |------|--------|-------|--------|-------|--------|
-|  9   |  ✅      |   ✅    |    -    |   3   |        |
+| 9 | ✅ | ✅ | - | 3 |  |
+
+
+
 
 ### Deepseek R1
 
 | Task | Script | Scene | Shader | Score |  Notes |
 |------|--------|-------|--------|-------|--------|
-|  9   |  ✅      |   ✅    |    ✅    |   3   |        |
+| 6 | ✅ | ❌ | - | 1 | invalid scene |
+| 9 | ✅ | ✅ | ✅ | 3 |  |
+
+
+
 
 
 ## The tasks

@@ -1,9 +1,14 @@
 extends Control
 @onready var dropdown_container = $ModelSelector
 @onready var dropdown = $ModelSelector/ModelDropdown
+@onready var task_description_label = %TaskDescriptionLabel
 var current_model = ""
+var task_descriptions = {}
 
 func _ready():
+	# Load task descriptions from JSON file
+	load_task_descriptions()
+	
 	# Create and set up the model selection dropdown
 	create_model_dropdown()
 	
@@ -24,6 +29,11 @@ func create_model_dropdown():
 	if existing_label:
 		control_node.remove_child(existing_label)
 		vbox.add_child(existing_label)
+	
+	# Get the dropdown container's parent reference
+	var parent = dropdown_container.get_parent()
+	if parent:
+		parent.remove_child(dropdown_container)
 	
 	# Add the dropdown container to the VBox
 	vbox.add_child(dropdown_container)
@@ -95,6 +105,10 @@ func update_task_buttons(tasks: Array = []):
 		# Connect the button to a function that will change the scene
 		task_button.pressed.connect(_on_task_button_pressed.bind(i))
 		
+		# Connect mouse hover signals for task description display
+		task_button.mouse_entered.connect(_on_task_button_mouse_entered.bind(i))
+		task_button.mouse_exited.connect(_on_task_button_mouse_exited)
+		
 		# Add the button to the container
 		buttons.add_child(task_button)
 
@@ -109,3 +123,30 @@ func _on_task_button_pressed(task_number):
 	else:
 		# Scene doesn't exist, show an error
 		push_error("Scene not found: " + scene_path)
+
+# Function to load task descriptions from JSON file
+func load_task_descriptions():
+	var file = FileAccess.open("res://data/task_descriptions.json", FileAccess.READ)
+	if file:
+		var json = JSON.new()
+		var error = json.parse(file.get_as_text())
+		if error == OK:
+			var data = json.get_data()
+			if data.has("tasks"):
+				for task in data["tasks"]:
+					task_descriptions[int(task["id"])] = task["description"]
+		else:
+			push_error("JSON Parse Error: " + json.get_error_message())
+	else:
+		push_error("Failed to open task descriptions file")
+
+# Function to handle mouse entering a task button
+func _on_task_button_mouse_entered(task_number: int):
+	if task_descriptions.has(task_number):
+		task_description_label.text = task_descriptions[task_number]
+		task_description_label.show()
+
+# Function to handle mouse exiting a task button
+func _on_task_button_mouse_exited():
+	task_description_label.text = ""
+	task_description_label.hide()

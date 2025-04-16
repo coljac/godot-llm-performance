@@ -39,7 +39,7 @@ anchor_right = 1.0
 offset_bottom = 55.0
 grow_horizontal = 2
 theme_override_constants/margin_top = 80
-theme_override_constants/margin_bottom = 60
+theme_override_constants/margin_bottom = 40
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 2
@@ -78,13 +78,28 @@ item_count = 1
 popup/item_0/text = "LLM Number 1"
 popup/item_0/id = 0
 
+[node name="TaskDescriptionLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -276.0
+offset_bottom = -236.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -106.0
+offset_top = -232.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ig7tw")
