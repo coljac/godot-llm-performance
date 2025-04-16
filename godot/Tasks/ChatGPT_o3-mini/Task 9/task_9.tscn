@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://cucwflwlm2xdx"]
+
+[ext_resource type="Script" uid="uid://bguw32w5wll0t" path="res://Tasks/ChatGPT_o3-mini/Task 9/wiggle_button.gd" id="1_n6itk"]
+[ext_resource type="Shader" uid="uid://dxocm1gqorodg" path="res://Tasks/ChatGPT_o3-mini/Task 9/wiggle_button.gdshader" id="2_kf8hx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kf8hx"]
+shader = ExtResource("2_kf8hx")
+shader_parameter/intensity = 1.281
+shader_parameter/active = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qv73h"]
+shader = ExtResource("2_kf8hx")
+shader_parameter/intensity = 0.275
+shader_parameter/active = true
+
+[node name="Task9" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+material = SubResource("ShaderMaterial_kf8hx")
+layout_mode = 0
+offset_left = 33.0
+offset_top = 46.0
+offset_right = 111.0
+offset_bottom = 77.0
+text = "Press Me"
+script = ExtResource("1_n6itk")
+intensity = 1.281
+
+[node name="Button2" type="Button" parent="."]
+material = SubResource("ShaderMaterial_qv73h")
+layout_mode = 0
+offset_left = 36.0
+offset_top = 131.0
+offset_right = 136.0
+offset_bottom = 162.0
+text = "Manual test"

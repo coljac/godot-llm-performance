@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" uid="uid://bguw32w5wll0t" path="res://Tasks/ChatGPT_o3-mini/Task 9/wiggle_button.gd" id="WiggleButtonScript"]
+
+[node name="WiggleButtonDemo" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_vertical = 3
+custom_constants/separation = 20
+
+[node name="LowIntensityButton" type="Button" parent="VBoxContainer"]
+text = "Low Intensity (0.5)"
+custom_minimum_size = Vector2(0, 40)
+size_flags_horizontal = 3
+script = ExtResource(WiggleButtonScript)
+intensity = 0.5
+
+[node name="MediumIntensityButton" type="Button" parent="VBoxContainer"]
+text = "Medium Intensity (1.0)"
+custom_minimum_size = Vector2(0, 40)
+size_flags_horizontal = 3
+script = ExtResource(WiggleButtonScript)
+intensity = 1.0
+
+[node name="HighIntensityButton" type="Button" parent="VBoxContainer"]
+text = "High Intensity (1.5)"
+custom_minimum_size = Vector2(0, 40)
+size_flags_horizontal = 3
+script = ExtResource(WiggleButtonScript)
+intensity = 1.5

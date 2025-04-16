@@ -38,31 +38,39 @@ The models may also be instructed where to put the files they create.
 
 ## Results
 
+Achievement: ✅=works  ❌=broken  ❓=not applicable 😐=has issues
+Score: 0=broken/useless 1=potentially useful/missed instructions 2=works 3=works perfectly
+
 ### GPT 4.1
 
 | Task | Script | Scene | Shader | Score |  Notes |
 |------|--------|-------|--------|-------|--------|
-|  9   |  ✅      |   ❌    |    -    |   6   |        |
+|  9   |  ✅      |   ❌    |    -    |   2   |        |
+
+### o3-mini
+
+| Task | Script | Scene | Shader | Score |  Notes |
+|------|--------|-------|--------|-------|--------|
+|  9   |   ❌     |   ❌    |    ✅    |   1   | Only shader worked   |
 
 ### Sonnet 3.7
 
 | Task | Script | Scene | Shader | Score |  Notes |
 |------|--------|-------|--------|-------|--------|
-|  9   |  ✅      |   ✅    |    ❌    |   9   |  Over-engineered, shader faulty |
+|  9   |  ✅      |   ✅    |    ❌    |   3   |  Over-engineered, shader faulty |
 
 ### Gemini Pro 2.5
 
 | Task | Script | Scene | Shader | Score |  Notes |
 |------|--------|-------|--------|-------|--------|
-|  9   |  ✅      |   ✅    |    -    |   9   |        |
+|  9   |  ✅      |   ✅    |    -    |   3   |        |
 
 ### Deepseek R1
 
 | Task | Script | Scene | Shader | Score |  Notes |
 |------|--------|-------|--------|-------|--------|
-|  9   |  ✅      |   ✅    |    ✅    |   9   |        |
+|  9   |  ✅      |   ✅    |    ✅    |   3   |        |
 
-✅=works  ❌=broken  ❓=not applicable 😐=has issues
 
 ## The tasks
 
@@ -85,7 +93,7 @@ If you need to, you can consult the documentation at https://docs.godotengine.or
 
 **Task 1: Plotting Component**
 
-"This is a Godot 4.4/GDScript task. Create a plotting component for the UI that:
+This is a Godot 4.4/GDScript task. Create a plotting component for the UI that:
 
 - Provides a plotting area with defined x/y ranges (x_min, x_max, y_min, y_max).
 - Has logic to translate between pixel and plot coordinate space.
