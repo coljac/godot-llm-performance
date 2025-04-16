@@ -1,0 +1,109 @@
+[gd_scene load_steps=9 format=3 uid="uid://c8yvxw1yvqnhm"]
+
+[ext_resource type="Script" path="res://Tasks/Sonnet_3.7/Task 6/disappearing_cube.gd" id="1_ixnqm"]
+[ext_resource type="Script" path="res://Tasks/Sonnet_3.7/Task 6/push_controller.gd" id="2_ixnqm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uxvs2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yvdqr"]
+albedo_color = Color(0.8, 0.2, 0.2, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ixnqm"]
+material = SubResource("StandardMaterial3D_yvdqr")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ixnqm"]
+size = Vector3(20, 1, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ixnqm"]
+albedo_color = Color(0.2, 0.7, 0.2, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_yvdqr"]
+material = SubResource("StandardMaterial3D_ixnqm")
+size = Vector3(20, 1, 20)
+
+[node name="Task6" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, -0.75, 0.433013, 0, 10, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 8, 12)
+
+[node name="Ground" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+shape = SubResource("BoxShape3D_ixnqm")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+mesh = SubResource("BoxMesh_yvdqr")
+
+[node name="DisappearingCubes" type="Node3D" parent="."]
+
+[node name="DisappearingCube1" type="RigidBody3D" parent="DisappearingCubes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mass = 2.0
+script = ExtResource("1_ixnqm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DisappearingCubes/DisappearingCube1"]
+shape = SubResource("BoxShape3D_uxvs2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="DisappearingCubes/DisappearingCube1"]
+mesh = SubResource("BoxMesh_ixnqm")
+
+[node name="DisappearingCube2" type="RigidBody3D" parent="DisappearingCubes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+mass = 2.0
+script = ExtResource("1_ixnqm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DisappearingCubes/DisappearingCube2"]
+shape = SubResource("BoxShape3D_uxvs2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="DisappearingCubes/DisappearingCube2"]
+mesh = SubResource("BoxMesh_ixnqm")
+
+[node name="DisappearingCube3" type="RigidBody3D" parent="DisappearingCubes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+mass = 2.0
+script = ExtResource("1_ixnqm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DisappearingCubes/DisappearingCube3"]
+shape = SubResource("BoxShape3D_uxvs2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="DisappearingCubes/DisappearingCube3"]
+mesh = SubResource("BoxMesh_ixnqm")
+
+[node name="DisappearingCube4" type="RigidBody3D" parent="DisappearingCubes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 2)
+mass = 2.0
+script = ExtResource("1_ixnqm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DisappearingCubes/DisappearingCube4"]
+shape = SubResource("BoxShape3D_uxvs2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="DisappearingCubes/DisappearingCube4"]
+mesh = SubResource("BoxMesh_ixnqm")
+
+[node name="DisappearingCube5" type="RigidBody3D" parent="DisappearingCubes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -2)
+mass = 2.0
+script = ExtResource("1_ixnqm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DisappearingCubes/DisappearingCube5"]
+shape = SubResource("BoxShape3D_uxvs2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="DisappearingCubes/DisappearingCube5"]
+mesh = SubResource("BoxMesh_ixnqm")
+
+[node name="PushController" type="Node3D" parent="."]
+script = ExtResource("2_ixnqm")
+
+[node name="Instructions" type="Label" parent="."]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 580.0
+offset_bottom = 120.0
+text = "Click on a cube and drag to push it.
+Cubes will disappear if they lose contact with the ground or other cubes.
+Press R to reset the scene."
