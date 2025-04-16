@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="wiggle_button_demo"]
+
+[node name="WiggleButtonDemo" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.3
+anchor_right = 0.5
+anchor_bottom = 0.7
+offset_left = -100.0
+offset_top = 0.0
+offset_right = 100.0
+offset_bottom = 200.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="WiggleButton1" type="Button" parent="VBoxContainer"]
+text = "Wiggle: 5"
+script = ExtResource("1")
+wiggle_amount = 5.0
+
+[node name="WiggleButton2" type="Button" parent="VBoxContainer"]
+text = "Wiggle: 15"
+script = ExtResource("1")
+wiggle_amount = 15.0
+
+[node name="WiggleButton3" type="Button" parent="VBoxContainer"]
+text = "Wiggle: 30"
+script = ExtResource("1")
+wiggle_amount = 30.0
+
+[ext_resource path="res://Tasks/ChatGPT_4.1/Task 9/wiggle_button.gd" type="Script" id=1]

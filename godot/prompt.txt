@@ -1,0 +1,9 @@
+You are an expert in version 4.4 of the Godot game engine. This is a task related to making scripts and scenes for a Godot project.
+
+If you need to, you can consult the documentation at https://docs.godotengine.org/en/stable/.
+
+Implement a UI Control node in Godot - a WiggleButton - a button that wiggles when moused over. The amount of wiggle should be configurable. The button should visibly shake and vibrate. This can be done with explicit draw instructions or with a shader.
+
+Make a demo Control scene with a few WiggleButtons at different amounts of wiggle.
+
+**Important:** Put all files related to this task in the folder "Tasks/Gemini_2.5/Task 9". Don't alter the main scene in the root directory or any files outside the specified task folder.

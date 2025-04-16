@@ -4,16 +4,69 @@ These tests give an idea of how well current models perform on Godot tasks - wri
 
 As marked, some tests are naive or very self contained - "Give me the code snippet" - some are run with agentic capabilities, so the model can take advantage of the language parser and error messages from testing. 
 
-If you have an idea for a test, please open an issue. If you have implemented an idea and have some results, feel free to open a pull request by adding the task to this file and the results to `results/`.
+**Please contribute.** If you have an idea for a test, please open an issue. If you have implemented an idea and have some results, feel free to open a pull request by adding the task to this file and the results to `results/`.
+
+The godot project in this repository contains examples of the implmentations, working or not, for each task/model ran.
+
+## Methodology
+
+For 'complex' tasks with various moving pieces, the tasks are implemented in VSCode using [Roo Code](https://github.com/RooVetGit/Roo-Code) unless otherwise noted. Simple tasks are sent via a chat interface.
+
+Prompt preamble:
+```
+You are an expert in version 4.4 of the Godot game engine. This is a task related to making scripts and scenes for a Godot project.
+
+If you need to, you can consult the documentation at https://docs.godotengine.org/en/stable/.
+```
+The models may also be instructed where to put the files they create.
 
 ## The models
 
-- OpenAI: 
-- Anthropic:
-- Gemini:
-- Deepseek:
+gpt-4.1
+gemini-pro-exp-03-25
+deepseek-reasoner
+claude-3.7-sonnet-20250219
+
+claude-3.7-sonnet-20250219:thinking
+
+- OpenAI: ChatGPT 4.1, o3
+- Anthropic: Sonnet 3.7
+- Gemini: Gemini Pro 2.5
+- Deepseek: R1
+
+## Leaderboard
+
+| Model      | 2D | 3D | Control | Shader | Total |
+|------------|----|----|---------|--------|-------|
+| Sonnet 3.7 |    |    |         |        |       |
+| Gemini 2.5 |    |    |         |        |       |
+
+## Results
+
+gpt-4.1
+
+### Sonnet 3.7
+
+| Task | Script | Scene | Shader | Score |  Notes |
+|------|--------|-------|--------|-------|--------|
+|  9   |  ✅      |   ✅    |    ❌    |       |        |
+
+### Gemini Pro 2.5
+
+| Task | Script | Scene | Shader | Score |  Notes |
+|------|--------|-------|--------|-------|--------|
+|  9   |  ✅      |   ✅    |    ❌    |       |        |
+
+✅=works  ❌=broken  ❓=not applicable 😐=has issues
 
 ## The tasks
+
+| # | Task         | Type    | Complexity | Script | Scene | Shader |
+|---|--------------|---------|------------|--------|-------|--------|
+| 9 | WiggleButton | Control | Low        | Y      | Y     | Y      |
+
+
+## Task details
 
 Prompt preamble:
 ```

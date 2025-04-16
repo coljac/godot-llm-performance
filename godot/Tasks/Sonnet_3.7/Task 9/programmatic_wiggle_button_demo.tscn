@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3]
 
-[ext_resource type="Script" uid="uid://bu1uep24ixge0" path="res://Tasks/Sonnet_3.7/Task 9/programmatic_wiggle_button_demo.gd" id="1_yvnqw"]
+[ext_resource type="Script" uid=Gemini_2.5"uid://bu1uep24ixge0" path="res://Tasks/Sonnet_3.7/Task 9/programmatic_wiggle_button_demo.gd" id="1_yvnqw"]
 
 [node name="ProgrammaticWiggleButtonDemo" type="Control"]
 layout_mode = 3

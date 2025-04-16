@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://dieygvhbu3rvq"]
+
+[ext_resource type="Script" uid="uid://kwq3i31wityd" path="res://Tasks/ChatGPT_4.1/Task 9/wiggle_button.gd" id="1_rtn1j"]
+
+[node name="Task9" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 150.0
+offset_right = 453.0
+offset_bottom = 181.0
+text = "Press Me"
+script = ExtResource("1_rtn1j")
+wiggle_amount = 4.0

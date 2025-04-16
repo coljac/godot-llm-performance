@@ -1,0 +1,1 @@
+Scene won't load without manually setting uids etc.
