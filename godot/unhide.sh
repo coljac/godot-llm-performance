@@ -1,3 +1,3 @@
-#!/use/bin/zsh
+#!/usr/bin/zsh
 
 mv /tmp/hidden/* Tasks/

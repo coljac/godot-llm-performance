@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://0wdg7yvqnn02"]
+
+[ext_resource type="PackedScene" uid="uid://1t1yy2t4m32s" path="res://Tasks/Deepseek_R1/Task 9/wiggle_button_demo.tscn" id="1_dvm88"]
+
+[node name="Task9" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WiggleButtonDemo" parent="." instance=ExtResource("1_dvm88")]
+layout_mode = 1

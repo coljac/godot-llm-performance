@@ -22,17 +22,10 @@ The models may also be instructed where to put the files they create.
 
 ## The models
 
-gpt-4.1
-gemini-pro-exp-03-25
-deepseek-reasoner
-claude-3.7-sonnet-20250219
-
-claude-3.7-sonnet-20250219:thinking
-
-- OpenAI: ChatGPT 4.1, o3
-- Anthropic: Sonnet 3.7
-- Gemini: Gemini Pro 2.5
-- Deepseek: R1
+- OpenAI: ChatGPT 4.1 (gpt-4.1) O3 (o3...)
+- Anthropic: Sonnet 3.7 (claude-3.7-sonnet-20250219, claude-3.7-sonnet-20250219:thinking)
+- Gemini: Gemini Pro 2.5 (gemini-pro-exp-03-25)
+- Deepseek: Deepseek R1 (deepseek-reasoner)
 
 ## Leaderboard
 
@@ -40,10 +33,16 @@ claude-3.7-sonnet-20250219:thinking
 |------------|----|----|---------|--------|-------|
 | Sonnet 3.7 |    |    |         |        |       |
 | Gemini 2.5 |    |    |         |        |       |
+| ChatGPT 4.1 |    |    |         |        |       |
+| Deepseek R1 |    |    |         |        |       |
 
 ## Results
 
-gpt-4.1
+### GPT 4.1
+
+| Task | Script | Scene | Shader | Score |  Notes |
+|------|--------|-------|--------|-------|--------|
+|  9   |  ✅      |   ❌    |    -    |       |        |
 
 ### Sonnet 3.7
 

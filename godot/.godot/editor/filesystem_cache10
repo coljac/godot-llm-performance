@@ -1,15 +1,22 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1744767884
+::res://::1744771187
 icon.svg::CompressedTexture2D/CompressedTexture2D::2260886466164681147::1744767212::1744767212::1::::<><><>0<>0<>6eb1e1e063fcdb363ed4d3bc26101268<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 main.gd::GDScript/GDScript::4626781593960340301::1744767212::0::1::::<>Control<><>0<>0<><>::
-main.tscn::PackedScene::2723928302055860820::1744767730::0::1::::<><><>0<>0<><>::uid://b66iof5ydgdkn::::res://main.gd
-prompt.txt::TextFile::-1::1744767329::0::1::::<><><>0<>0<><>::
-::res://Tasks/::1744767468
-::res://Tasks/ChatGPT_4.1/::1744767884
-wiggle_button_demo.tscn::PackedScene::-1::1744767857::0::1::::<><><>0<>0<><>::
-::res://Tasks/ChatGPT_4.1/Task 9/::1744767884
-task_9.tscn::PackedScene::7628035632375665266::1744767842::0::1::::<><><>0<>0<><>::
-wiggle_button.gd::GDScript::748326685735621855::1744767495::0::1::::<>Button<><>0<>0<><>::
+main.tscn::PackedScene::2723928302055860820::1744771117::0::1::::<><><>0<>0<><>::uid://b66iof5ydgdkn::::res://main.gd
+prompt.txt::TextFile/TextFile::-1::1744767329::0::1::::<><><>0<>0<><>::
+::res://9/::1744770806
+::res://Tasks/::1744771172
+::res://Tasks/ChatGPT_4.1/::1744767887
+::res://Tasks/ChatGPT_4.1/Task 9/::1744770378
+notes.txt::TextFile::-1::1744767995::0::1::::<><><>0<>0<><>::
+task_9.tscn::PackedScene::7730499347666892830::1744770378::0::1::::<><><>0<>0<><>::uid://kwq3i31wityd::::res://Tasks/ChatGPT_4.1/Task 9/wiggle_button.gd
+wiggle_button.gd::GDScript::748326685735621855::1744770528::0::1::::<>Button<><>0<>0<><>::
+wiggle_button_demo.tscn::PackedScene::-1::1744767977::0::1::::<><><>0<>0<><>::
+::res://Tasks/Deepseek_R1/::1744771106
+::res://Tasks/Deepseek_R1/Task 9/::1744771149
+wiggle_button.gd::GDScript::177999259840718262::1744771112::0::1::::<>Button<><>0<>1<><>::
+wiggle_button.gdshader::Shader::5801524581299524478::1744770879::0::1::::<><><>0<>0<><>::
+wiggle_button_demo.tscn::PackedScene::1865755915954277736::1744771149::0::1::::<><><>0<>0<><>::uid://cshve2mqmj8q::::res://Tasks/Deepseek_R1/Task 9/wiggle_button.gd
 ::res://Tasks/Gemini_2.5/::1744767212
 ::res://Tasks/Gemini_2.5/Task 9/::1744767212
 task_9.tscn::PackedScene/PackedScene::5533866472166159960::1744767212::0::1::::<><><>0<>0<><>::uid://c6w8q7x5y4f3g::::res://Tasks/Gemini_2.5/Task 9/wiggle_button_demo.tscn
@@ -19,7 +26,7 @@ wiggle_button_demo.tscn::PackedScene/PackedScene::6996145781892280250::174476721
 ::res://Tasks/Sonnet_3.7/::1744767212
 ::res://Tasks/Sonnet_3.7/Task 9/::1744767212
 programmatic_wiggle_button_demo.gd::GDScript/GDScript::3845093691979452241::1744767212::0::1::::<>Control<><>0<>0<><>::
-programmatic_wiggle_button_demo.tscn::PackedScene/PackedScene::-1::1744767212::0::1::::<><><>0<>0<><>::uid://bu1uep24ixge0::::res://Tasks/Sonnet_3.7/Task 9/programmatic_wiggle_button_demo.gd
+programmatic_wiggle_button_demo.tscn::PackedScene::-1::1744767969::0::1::::<><><>0<>0<><>::
 README.md::TextFile/TextFile::-1::1744767212::0::1::::<><><>0<>0<><>::
 shader_wiggle_button.gd::GDScript/GDScript::5249870413920061105::1744767212::0::1::::ShaderWiggleButton<>Button<><>0<>0<><>::
 shader_wiggle_button_demo.tscn::PackedScene/PackedScene::-1::1744767212::0::1::::<><><>0<>0<><>::uid://cg2cumdmq5qyr::::res://Tasks/Sonnet_3.7/Task 9/shader_wiggle_button.gd
