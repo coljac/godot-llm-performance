@@ -1,0 +1,108 @@
+[gd_scene load_steps=3 format=3 uid="uid://be2qx3ssvtiam"]
+
+[ext_resource type="Script" uid="uid://b66iof5ydgdkn" path="res://main.gd" id="1_ig7tw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ig7tw"]
+bg_color = Color(0, 0.403857, 0.888483, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.00351917, 0.00351917, 0.00351916, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ig7tw")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.216573, 0.536483, 0.164935, 1)
+
+[node name="Control" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 55.0
+grow_horizontal = 2
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_bottom = 60
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "See https://github.com/coljac/godot-llm-performance"
+horizontal_alignment = 1
+
+[node name="ModelSelector" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="ModelSelector"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Label" type="Label" parent="ModelSelector"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Model:"
+
+[node name="ColorRect2" type="ColorRect" parent="ModelSelector"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ModelDropdown" type="OptionButton" parent="ModelSelector"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+item_count = 1
+popup/item_0/text = "LLM Number 1"
+popup/item_0/id = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -106.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ig7tw")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Buttons" type="HFlowContainer" parent="PanelContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+
+[node name="Task1" type="Button" parent="PanelContainer/MarginContainer/Buttons"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Task 1"

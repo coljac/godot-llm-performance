@@ -1,0 +1,104 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" uid="uid://b8dq7vudqv130" path="res://Tasks/Sonnet_3.7/Task 9/wiggle_button.gd" id="1_yvnqw"]
+
+[node name="WiggleButtonDemo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "WiggleButton Demo"
+horizontal_alignment = 1
+
+[node name="InstructionLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Hover over the buttons to see the wiggle effect"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ButtonContainer1" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="WiggleButton1" type="Button" parent="CenterContainer/VBoxContainer/ButtonContainer1"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "Small Wiggle"
+script = ExtResource("1_yvnqw")
+wiggle_amount = 2.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/ButtonContainer1"]
+layout_mode = 2
+text = "Wiggle Amount: 2.0"
+
+[node name="ButtonContainer2" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="WiggleButton2" type="Button" parent="CenterContainer/VBoxContainer/ButtonContainer2"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "Medium Wiggle"
+script = ExtResource("1_yvnqw")
+wiggle_amount = 5.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/ButtonContainer2"]
+layout_mode = 2
+text = "Wiggle Amount: 5.0"
+
+[node name="ButtonContainer3" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="WiggleButton3" type="Button" parent="CenterContainer/VBoxContainer/ButtonContainer3"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "Large Wiggle"
+script = ExtResource("1_yvnqw")
+wiggle_amount = 10.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/ButtonContainer3"]
+layout_mode = 2
+text = "Wiggle Amount: 10.0"
+
+[node name="ButtonContainer4" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="WiggleButton4" type="Button" parent="CenterContainer/VBoxContainer/ButtonContainer4"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "Extreme Wiggle"
+script = ExtResource("1_yvnqw")
+wiggle_amount = 15.0
+wiggle_speed = 15.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/ButtonContainer4"]
+layout_mode = 2
+text = "Wiggle Amount: 15.0
+Wiggle Speed: 15.0"

@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://wew2w1hd5njo"]
+
+[ext_resource type="PackedScene" path="res://Tasks/Sonnet_3.7/Task 9/wiggle_button_demo.tscn" id="1_lfnqw"]
+[ext_resource type="PackedScene" path="res://Tasks/Sonnet_3.7/Task 9/shader_wiggle_button_demo.tscn" id="2_yvnqw"]
+[ext_resource type="Script" uid="uid://d1s22g52j1tqy" path="res://Tasks/Sonnet_3.7/Task 9/wiggle_button_main_demo.gd" id="3_yvnqw"]
+[ext_resource type="PackedScene" path="res://Tasks/Sonnet_3.7/Task 9/programmatic_wiggle_button_demo.tscn" id="4_yvnqw"]
+
+[node name="WiggleButtonMainDemo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_yvnqw")
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+
+[node name="Position-Based Wiggle" type="Control" parent="TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="WiggleButtonDemo" parent="TabContainer/Position-Based Wiggle" instance=ExtResource("1_lfnqw")]
+layout_mode = 1
+
+[node name="Shader-Based Wiggle" type="Control" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="ShaderWiggleButtonDemo" parent="TabContainer/Shader-Based Wiggle" instance=ExtResource("2_yvnqw")]
+layout_mode = 1
+
+[node name="Programmatic Demo" type="Control" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="ProgrammaticWiggleButtonDemo" parent="TabContainer/Programmatic Demo" instance=ExtResource("4_yvnqw")]
+layout_mode = 1

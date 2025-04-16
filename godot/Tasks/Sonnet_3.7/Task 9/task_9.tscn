@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://hukmos8mr807"]
+
+[ext_resource type="PackedScene" uid="uid://wew2w1hd5njo" path="res://Tasks/Sonnet_3.7/Task 9/wiggle_button_main_demo.tscn" id="1_57eix"]
+
+[node name="Task 9" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WiggleButtonMainDemo" parent="." instance=ExtResource("1_57eix")]
+layout_mode = 1
