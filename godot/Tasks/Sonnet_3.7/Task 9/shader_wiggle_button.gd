@@ -13,7 +13,7 @@ var _shader_material: ShaderMaterial
 func _ready():
 	# Create shader material and apply it to the button
 	_shader_material = ShaderMaterial.new()
-	_shader_material.shader = load("res://Tasks/Sonnet_3.7/Task 9/Taasks/Task 9/wiggle_shader.gdshader")
+	_shader_material.shader = load("res://Tasks/Sonnet_3.7/Task 9/wiggle_shader.gdshader")
 	
 	# Set initial shader parameters
 	_shader_material.set_shader_parameter("wiggle_amount", wiggle_amount)

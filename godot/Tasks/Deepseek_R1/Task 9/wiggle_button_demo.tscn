@@ -3,17 +3,17 @@
 [ext_resource type="Script" uid="uid://cshve2mqmj8q" path="res://Tasks/Deepseek_R1/Task 9/wiggle_button.gd" id="1_2mtq7"]
 [ext_resource type="Shader" uid="uid://cowki6fdvkjxm" path="res://Tasks/Deepseek_R1/Task 9/wiggle_button.gdshader" id="1_iqm6v"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_b08ay"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iqm6v"]
 shader = ExtResource("1_iqm6v")
 shader_parameter/intensity = 0.5
 shader_parameter/active = false
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_3g7in"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b08ay"]
 shader = ExtResource("1_iqm6v")
 shader_parameter/intensity = 1.0
 shader_parameter/active = false
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_plqb1"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3g7in"]
 shader = ExtResource("1_iqm6v")
 shader_parameter/intensity = 1.5
 shader_parameter/active = false
@@ -33,7 +33,7 @@ anchor_bottom = 1.0
 size_flags_vertical = 3
 
 [node name="LowIntensityButton" type="Button" parent="VBoxContainer"]
-material = SubResource("ShaderMaterial_b08ay")
+material = SubResource("ShaderMaterial_iqm6v")
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -41,7 +41,7 @@ text = "Low Intensity (0.5)"
 script = ExtResource("1_2mtq7")
 
 [node name="MediumIntensityButton" type="Button" parent="VBoxContainer"]
-material = SubResource("ShaderMaterial_3g7in")
+material = SubResource("ShaderMaterial_b08ay")
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -50,7 +50,7 @@ script = ExtResource("1_2mtq7")
 intensity = 1.0
 
 [node name="HighIntensityButton" type="Button" parent="VBoxContainer"]
-material = SubResource("ShaderMaterial_plqb1")
+material = SubResource("ShaderMaterial_3g7in")
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3

@@ -1,4 +1,4 @@
-res://Tasks/ChatGPT_4.1/Task 9/task_9.tscn
-res://main.tscn
-res://Tasks/Deepseek_R1/Task 9/wiggle_button_demo.tscn
-res://Tasks/Deepseek_R1/Task 9/task_9.tscn
+res://Tasks/ChatGPT_4.1/Task 9/wiggle_button.gd
+res://Tasks/Deepseek_R1/Task 9/wiggle_button.gd
+res://Tasks/Sonnet_3.7/Task 9/shader_wiggle_button.gd
+res://Tasks/Deepseek_R1/Task 9/wiggle_button.gdshader

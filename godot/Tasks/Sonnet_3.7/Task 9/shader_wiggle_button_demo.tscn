@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://d3fcsgeundbhc"]
 
 [ext_resource type="Script" uid="uid://cg2cumdmq5qyr" path="res://Tasks/Sonnet_3.7/Task 9/shader_wiggle_button.gd" id="1_s4bnm"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_me587"]
 
 [node name="ShaderWiggleButtonDemo" type="Control"]
 layout_mode = 3
@@ -43,6 +45,7 @@ theme_override_constants/separation = 20
 alignment = 1
 
 [node name="ShaderWiggleButton1" type="Button" parent="CenterContainer/VBoxContainer/ButtonContainer1"]
+material = SubResource("ShaderMaterial_me587")
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 text = "Small Wiggle"
@@ -63,7 +66,6 @@ custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 text = "Medium Wiggle"
 script = ExtResource("1_s4bnm")
-wiggle_amount = 5.0
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer/ButtonContainer2"]
 layout_mode = 2
