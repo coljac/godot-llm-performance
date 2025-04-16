@@ -42,28 +42,35 @@ The models may also be instructed where to put the files they create.
 
 | Task | Script | Scene | Shader | Score |  Notes |
 |------|--------|-------|--------|-------|--------|
-|  9   |  ✅      |   ❌    |    -    |       |        |
+|  9   |  ✅      |   ❌    |    -    |   6   |        |
 
 ### Sonnet 3.7
 
 | Task | Script | Scene | Shader | Score |  Notes |
 |------|--------|-------|--------|-------|--------|
-|  9   |  ✅      |   ✅    |    ❌    |       |        |
+|  9   |  ✅      |   ✅    |    ❌    |   9   |  Over-engineered, shader faulty |
 
 ### Gemini Pro 2.5
 
 | Task | Script | Scene | Shader | Score |  Notes |
 |------|--------|-------|--------|-------|--------|
-|  9   |  ✅      |   ✅    |    ❌    |       |        |
+|  9   |  ✅      |   ✅    |    -    |   9   |        |
+
+### Deepseek R1
+
+| Task | Script | Scene | Shader | Score |  Notes |
+|------|--------|-------|--------|-------|--------|
+|  9   |  ✅      |   ✅    |    ✅    |   9   |        |
 
 ✅=works  ❌=broken  ❓=not applicable 😐=has issues
 
 ## The tasks
 
-| # | Task         | Type    | Complexity | Script | Scene | Shader |
-|---|--------------|---------|------------|--------|-------|--------|
-| 9 | WiggleButton | Control | Low        | Y      | Y     | Y      |
+| # | Task         | Type    | Complexity | Script | Scene | Shader | Notes |
+|---|--------------|---------|------------|--------|-------|--------|-------|
+| 9 | WiggleButton | Control | Low        | Y      | Y     | Y      | 1     |
 
+Notes: <sup>1</sup> Roo Code
 
 ## Task details
 
@@ -75,7 +82,6 @@ You are an expert in version 4.4 of the Godot game engine. This is a task relate
 If you need to, you can consult the documentation at https://docs.godotengine.org/en/stable/.
 
 ```
-
 
 **Task 1: Plotting Component**
 
