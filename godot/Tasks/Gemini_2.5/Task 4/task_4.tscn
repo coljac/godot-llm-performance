@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cowemjijpdxe8"]
+
+[ext_resource type="Texture2D" uid="uid://7hgp8cfmribr" path="res://icon.svg" id="1_oq217"]
+[ext_resource type="Script" uid="uid://b6vsvj63eum7d" path="res://Tasks/Gemini_2.5/Task 4/rotator.gd" id="2_8fjv0"]
+
+[node name="Task4_tscn" type="Node2D"]
+
+[node name="Rotator" type="Sprite2D" parent="."]
+position = Vector2(569, 322)
+texture = ExtResource("1_oq217")
+script = ExtResource("2_8fjv0")

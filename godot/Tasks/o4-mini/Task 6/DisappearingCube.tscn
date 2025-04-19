@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid_DisappearCube"]
+
+[ext_resource path="res://Tasks/o4-mini/Task 6/DisappearingCube.gd" type="Script" id=1]
+
+[node name="DisappearingCube" type="RigidBody3D"]
+script = ExtResource(1)
+mass = 1.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = CubeMesh {
+    size = Vector3(1, 1, 1)
+}
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = BoxShape {
+    extents = Vector3(0.5, 0.5, 0.5)
+}

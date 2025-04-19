@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid_task6"]
+[ext_resource path="res://Tasks/o4-mini/Task 6/DisappearingCube.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Tasks/o4-mini/Task 6/Player.gd" type="Script" id=2]
+
+[node name="Task6" type="Node3D"]
+[node name="Floor" type="StaticBody3D" parent="Task6"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+shape = BoxShape { extents = Vector3(10, 0.1, 10) }
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+mesh = BoxMesh { size = Vector3(20, 0.2, 20) }
+
+[node name="Player" type="CharacterBody3D" parent="Task6"]
+script = ExtResource(2)
+transform = Transform(Basis(), Vector3(0, 1, 5))
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = CapsuleShape3D { radius = 0.5 height = 1.0 }
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
+mesh = CapsuleMesh { radius = 0.5 height = 1.0 }
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform(Basis(Vector3(-0.707, 0, -0.707), Vector3(0, 1, 0), Vector3(0.707, 0, -0.707)), Vector3(0, 1.5, -4))
+fov = 75.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Task6"]
+
+[node name="Cube1" parent="Task6" instance=ExtResource(1)]
+transform = Transform(Basis(), Vector3(0, 0.5, 0))
+[node name="Cube2" parent="Task6" instance=ExtResource(1)]
+transform = Transform(Basis(), Vector3(0, 1.5, 0))
+[node name="Cube3" parent="Task6" instance=ExtResource(1)]
+transform = Transform(Basis(), Vector3(0, 2.5, 0))
+[node name="Cube4" parent="Task6" instance=ExtResource(1)]
+transform = Transform(Basis(), Vector3(1.5, 0.5, 0))
